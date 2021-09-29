@@ -1,10 +1,9 @@
-import React , { useState,useEffect } from 'react';
+import React , { useState, useEffect } from 'react';
 import { Form, Button} from 'react-bootstrap';
-import HeadeVoltar from '../../molecules/HeaderVoltar';
-import { cadastrarTask } from "../../../services/repositories/taskRepository";
+import { cadastrarTask } from "../../services/repositories/taskRepository";
 
 
-export default function Formulario({onChange}){
+export default function Formulario(){
 
 
     const [title, setTitle] = useState("")
@@ -27,7 +26,7 @@ useEffect(() => {
 
     return(
         <>
-        <HeadeVoltar onClickVoltar={() => onChange({exibeForm: false})}/>
+       {/*<HeadeVoltar onClickVoltar={() => onChange({exibeForm: false})}/>*/}
         <Form onSubmit={(e)=>{
             e.preventDefault();
             cadastrar({title, description})

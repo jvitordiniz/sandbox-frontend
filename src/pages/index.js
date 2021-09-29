@@ -1,60 +1,62 @@
 import React from "react"
-import { Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from 'react';
-import Formulario from "../components/organisms/Formulario";
-import Footer from "../components/molecules/Footer";
-//import { cadastrarTask } from "../services/repositories/taskRepository";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Formulario from "./formularioTasks";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
 
-export default function Home(){
-
-  const [exibeForm, setExibeForm] = useState({exibeForm:false})
-
+{/* https://reactrouter.com/web/example/basic*/}
+export default function BasicExample() {
   return (
-  <>
-  {exibeForm.exibeForm ? (
+    <Router>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/formulario">Nova Task</Link>
+          </li>
+          <li>
+            <Link to="/dashboard">Dashboard</Link>
+          </li>
+        </ul>
 
-    <Formulario 
-    onChange={(params) => setExibeForm(params)} // onSend={onSend}
-    />
-  ) : (
-    <>
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉
-        </span>
-      </h1>
-    </main>
-    <Button 
-      variant="primary" 
-      className="btn-primary"
-      onClick={() => setExibeForm({exibeForm: true})}
-      >
-      Nova Task</Button>
-      <Footer
-      />
-    </>
-     )}
-    </>  
-  )
+        <hr />
+
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/formulario">
+            <Formulario />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+function Home() {
+  return (
+    <div>
+      <h2>Home</h2>
+    </div>
+  );
+}
+
+
+function Dashboard() {
+  return (
+    <div>
+      <h2>Dashboard</h2>
+    </div>
+  );
 }
