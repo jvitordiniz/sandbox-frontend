@@ -1,0 +1,32 @@
+.topBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 36px;
+    padding: 8px 0;
+    border-radius: 3px;
+    background: #FAFBFC;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    width: 100%;
+  }
+  
+  .topBar .leftIcons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 16px;
+  }
+  
+  .topBar button {
+    cursor: pointer;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0px;
+    background:transparent;
+    border:none;
+    outline:none;
+  }
+  

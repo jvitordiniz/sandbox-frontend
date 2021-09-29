@@ -1,0 +1,27 @@
+{
+  "name": "sandbox-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "sandbox-frontend",
+  "author": "João Vitor Diniz",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop -p 3311",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.13.2",
+    "bootstrap": "^5.1.1",
+    "gatsby": "^3.13.1",
+    "gatsby-plugin-styled-components": "^4.14.0",
+    "react": "^17.0.1",
+    "react-bootstrap": "^2.0.0-rc.0",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.3.1"
+  }
+}
