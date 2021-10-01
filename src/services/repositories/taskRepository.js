@@ -7,3 +7,8 @@ export const cadastrarTask = async(data) => {
     description: data.description
   })  
 } 
+
+export const listarTasks = async () =>{
+  const url = '/tasks'
+  return api.get(url)
+}

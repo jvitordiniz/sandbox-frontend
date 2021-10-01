@@ -6,10 +6,11 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Formulario from "./formularioTasks";
+import Formulario from "./formulario";
+import Listagem from "./listagem";
 
 
-{/* https://reactrouter.com/web/example/basic*/}
+/* https://reactrouter.com/web/example/basic*/
 export default function BasicExample() {
   return (
     <Router>
@@ -22,7 +23,7 @@ export default function BasicExample() {
             <Link to="/formulario">Nova Task</Link>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <Link to="/dashboard">Listagem</Link>
           </li>
         </ul>
 
@@ -36,7 +37,7 @@ export default function BasicExample() {
             <Formulario />
           </Route>
           <Route path="/dashboard">
-            <Dashboard />
+            <Listagem />
           </Route>
         </Switch>
       </div>
@@ -48,15 +49,6 @@ function Home() {
   return (
     <div>
       <h2>Home</h2>
-    </div>
-  );
-}
-
-
-function Dashboard() {
-  return (
-    <div>
-      <h2>Dashboard</h2>
     </div>
   );
 }

@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "develop": "gatsby develop",
-    "start": "gatsby clean & gatsby develop -p 3311",
+    "start": "gatsby develop -p 3311",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
@@ -22,6 +22,7 @@
     "react": "^17.0.1",
     "react-bootstrap": "^2.0.0-rc.0",
     "react-dom": "^17.0.1",
+    "react-query": "^3.24.5",
     "react-router-dom": "^5.3.0",
     "styled-components": "^5.3.1"
   }
